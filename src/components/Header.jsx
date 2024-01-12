@@ -1,5 +1,5 @@
 
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
@@ -8,10 +8,31 @@ function classNames(...classes) {
 }
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const handleMenuOpen = () => {
-        setMenuOpen(!menuOpen);
+    const [showOverlay, setShowOverlay] = useState(false);
+
+    useEffect(() => {
+        // Toggle body class to disable scrolling
+        if (showOverlay) {
+            document.body.classList.add('overflow-hidden');
+            document.body.style.paddingRight = '15px'
+            //document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+            //document.body.classList.remove('no-scroll');
+        }
+
+        // Cleanup effect
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+            document.body.style.paddingRight = ''
+            //document.body.classList.remove('no-scroll');
+        };
+    }, [showOverlay]);
+
+    const handleTransitionExited = () => {
+        setShowOverlay(false);
     };
+
     return (
         <>
             <div className="flex items-center justify-around gap-2 w-[701px] h-[39px]">
@@ -32,7 +53,11 @@ const Header = () => {
 
                 <Menu as="div" className="inline-block text-left">
                     <div className='flex gap-2 items-center justify-center hover:opacity-60 hover:transition-all hover:ease-in-out'>
-                        <Menu.Button className="flex gap-1">
+                        <Menu.Button
+                            //className="flex gap-1"
+                            onClick={() => setShowOverlay(!showOverlay)}
+                            className={`flex gap-1 focus:outline-none ${showOverlay ? 'pointer-events-none' : ''}`}
+                        >
                             <div className="text-[20px] text-white">
                                 More
                             </div>
@@ -41,7 +66,11 @@ const Header = () => {
                             </div>
                         </Menu.Button>
                     </div>
-
+                    {showOverlay && (
+                        <div className="fixed inset-0 z-40 bg-black bg-opacity-50">
+                            {/* This is the overlay that will cover the entire screen when the transition is active */}
+                        </div>
+                    )}
                     <Transition
                         as={Fragment}
                         enter="transition ease-out duration-100"
@@ -50,8 +79,9 @@ const Header = () => {
                         leave="transition ease-in duration-75"
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
+                        afterLeave={handleTransitionExited}
                     >
-                        <Menu.Items className="fixed right-0 top-0 h-screen w-[340px] z-10 origin-top-right bg-[#5200ff] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-auto">
+                        <Menu.Items className=" fixed right-0 top-0 h-screen w-[340px] z-40 origin-top-right bg-[#5200ff] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-auto">
                             <div className="pt-[24px] pl-[16px]">
                                 <div>
                                     <div className='w-[257px] h-[51px] flex border-none bg-[#2e257e] justify-between'>
@@ -442,3 +472,7 @@ const Header = () => {
 }
 
 export default Header;
+
+
+
+
