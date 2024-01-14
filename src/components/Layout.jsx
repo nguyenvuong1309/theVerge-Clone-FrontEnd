@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 
@@ -10,11 +11,15 @@ import Header from "./Header";
 const Layout = () => {
     return (
         <div>
-            <div className="relative pt-[41px] pr-[183px] pl-[582px] caret-transparent">
-                <Header />
+            <div className="flex justify-center">
+                <div className="relative pt-[41px] w-[1100px] flex justify-end caret-transparent">
+                    <Header />
+                </div>
             </div>
             <Outlet />
-            {/* <Footer /> */}
+            <div className="w-full flex justify-center pt-[40px] pb-[70px]">
+                <Footer />
+            </div>
         </div>
     )
 }
