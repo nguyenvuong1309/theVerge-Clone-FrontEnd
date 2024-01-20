@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import MostPopularItem from "./MostPopularItem";
 
 
@@ -7,8 +8,9 @@ import MostPopularItem from "./MostPopularItem";
 
 
 const MostPopular = ({ name, logo, mostpopularitem }) => {
+    const navigate = useNavigate();
     return (
-        <div className="w-[500px] bg-[#5200FF] relative rounded-[20px]  overflow-hidden">
+        <div className="w-[500px] bg-[#5200FF] relative rounded-[20px]  overflow-hidden h-fit" onClick={() => navigate("/detailpage")}>
             <div className="py-[20px] pl-[20px]">
                 <div class="w-[96.37px] h-3 text-white text-[10px] font-normal font-['Helvetica'] uppercase leading-[15px] tracking-wider">{name}</div>
             </div>

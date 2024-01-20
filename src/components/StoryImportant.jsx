@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router-dom";
 
 
 
 
 
 const StoryImportant = ({ border, logo, content, author, time, image }) => {
+    const navigate = useNavigate();
     return (
-        <div className={`w-[500px] px-[10px] pt-[30px] pb-[31px] hover:bg-slate-100 hover:bg-opacity-5 flex  ${border ? '  border border-[#313131CC] border-b-1 border-x-0 border-t-0  ' : ''}`}>
+        <div className={`max-w-[500px] px-[10px] pt-[30px] pb-[31px] hover:bg-slate-100 hover:bg-opacity-5 flex  ${border ? '  border border-[#313131CC] border-b-1 border-x-0 border-t-0  ' : ''}`} onClick={() => navigate("/detailpage")}>
             <div className="w-[60px] flex justify-center items-center">{logo}</div>
             <div className="w-[320px]">
                 <div class="w-full text-white text-2xl font-bold font-['Helvetica'] leading-[25px] tracking-tight pr-[10px]  hover:underline hover:underline-offset-[3px] decoration-[0.9px] decoration-[#3CFFD0]">{content}</div>
@@ -16,7 +18,7 @@ const StoryImportant = ({ border, logo, content, author, time, image }) => {
             </div>
             <div className="w-[22]"></div>
             <img className="w-[98px] h-[98px] object-fill" src={image} />
-        </div>
+        </div >
     )
 }
 

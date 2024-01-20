@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router-dom";
 
 
 
 
 
 const Top_Stories_Item = ({ number, content, author, logo, time, width, height, props, border }) => {
+    const navigate = useNavigate();
     return (
-        <div className="w-[380px]  flex items-start ">
+        <div className="w-[380px]  flex items-start " onClick={() => navigate("/detailpage")}>
             <div className='w-[40px] pt-[16px] pb-[17px]'>
                 <div class="w-5 h-5 pt-[2.75px] pb-[4.25px] bg-zinc-800 bg-opacity-90 rounded-full justify-center items-center inline-flex">
                     <div class="w-[4.43px] h-[13px] text-teal-300 text-[11px] font-normal font-['Helvetica'] leading-none flex justify-center items-center">{number}</div>
