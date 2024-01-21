@@ -3,38 +3,6 @@
 @tailwind utilities;
 
 
-:root {
-    --default-background: #ffffff; /* Default background color */
-    --default-text: #000000; /* Default text color */
-  }
-  
 body{
-    /* background-color: black; */
-    margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: var(--default-background);
-  color: var(--default-text);
-  transition: background-color 0.5s, color 0.5s;
+  background-color: black;
 }
-
-.home{
-    background-color: black;
-    color: white;
-}
-
-
-.detailpage{
-    background-color: white;    
-    color: black
-}
-
-body[data-theme='dark'] {
-    --default-background: #000000; /* Dark background color */
-    --default-text: #ffffff; /* Light text color for dark background */
-}
-
-body[data-theme='light'] {
-    --default-background: #ffffff; /* Light background color */
-    --default-text: #000000; /* Dark text color for light background */
-  }

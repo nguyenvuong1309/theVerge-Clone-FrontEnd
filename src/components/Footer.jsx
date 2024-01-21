@@ -3,8 +3,8 @@
 
 const Footer = () => {
     return (
-        <div className="max-w-[1300px] h-[215px]">
-            <div className="flex justify-center">
+        <div className="max-w-[1100px] h-[215px]">
+            <div className="flex justify-start">
                 <div className="h-[90.16px] flex justify-start items-start max-[1200px]:justify-center  w-[90%]">
                     <svg
                         //width="397" height="89" 
@@ -15,35 +15,12 @@ const Footer = () => {
                     </svg>
                 </div>
             </div>
-            {/* <div className=" text-[11px] font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider grid min-w-[733px]">
-                <div className="flex gap-2">
+            <div className="pt-[29.98px] flex max-[1200px]:flex  max-[1200px]:flex-col max-[1200px]:justify-center max-[1200px]:w-full">
+                <div className="w-[69%] max-[1200px]:w-full">
 
-                    <div className="hover:underline hover:underline-offset-2">Terms of Use</div>
-                    <div className="text-teal-300 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
-                    <div className="hover:underline hover:underline-offset-2">Privacy Notice</div>
-                    <div className="text-teal-300 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
-                    <div className="hover:underline hover:underline-offset-2">Privacy Notice</div>
-                    <div className="text-teal-300 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
-                    <div className="hover:underline hover:underline-offset-2">Cookie Policy</div>
-                    <div className="text-teal-300 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
-                    <div className="hover:underline hover:underline-offset-2">Do Not Sell Or Share My Personal Info</div>
-                </div>
-                <div className="flex gap-2">
-                    <div className="text-teal-300 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
-                    <div className="hover:underline hover:underline-offset-2">Licensing FAQ</div>
-                    <div className="text-teal-300 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
-                    <div className="hover:underline hover:underline-offset-2">Accessibility</div>
-                    <div className="text-teal-300 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
-                    <div className="hover:underline hover:underline-offset-2">Platform Status</div>
-                    <div className="text-teal-300 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
-                    <div className="hover:underline hover:underline-offset-2">How We Rate and Review Products</div>
-                </div>
-            </div> */}
-            <div className="pt-[29.98px]  flex gap-5 max-[1200px]:grid max-[1200px]:grid-cols-1">
-                <div className="">
-                    <div className="flex justify-center">
+                    <div className="flex justify-start max-[1200px]:justify-center">
 
-                        <div class="flex flex-wrap  w-[90%]">
+                        <div class="flex flex-wrap  w-[100%]">
 
                             <div class="flex items-center">
                                 <div class="hover:underline hover:underline-offset-2">Terms of Use</div>
@@ -86,8 +63,9 @@ const Footer = () => {
                         </div>
 
                     </div>
-                    <div className="flex justify-center">
-                        <div className="w-[90%] ">
+
+                    <div className="flex justify-start max-[1200px]:justify-center">
+                        <div className="w-[100%] ">
                             <div className="flex flex-wrap  text-[11px] font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider max-w-[733px] pt-[16px]  gap-2">
                                 <div className="hover:underline hover:underline-offset-2">Contact</div>
                                 <div className="text-yellow-400 text-xs font-normal font-['Helvetica'] uppercase leading-[21px] tracking-wider">/</div>
@@ -101,10 +79,11 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
 
-                <div className="flex justify-center ">
-                    <div className="w-[90%] h-[95px] relative flex-col justify-start items-start inline-flex">
+                <div className="flex justify-center">
+                    <div className="w-[100%] h-[95px] relative flex-col justify-start items-start inline-flex">
                         <div className=" text-[11px] font-bold font-['Helvetica'] uppercase leading-[21px] tracking-wider flex justify-center">
                             <div>
                                 The Verge is a vox media network
@@ -112,7 +91,7 @@ const Footer = () => {
                         </div>
                         <div className="pr-[76.47px] justify-start items-start gap-[12.31px] inline-flex">
                             <div className=" text-[11px] font-normal font-['Helvetica'] uppercase leading-tight tracking-wider hover:underline hover:underline-offset-2">Advertise with us</div>
-                            <div className="pr-[6.39px] justify-start items-start gap-[10.49px] flex">
+                            <div className=" justify-start items-start gap-[10.49px] flex">
                                 <div className="text-orange-600 text-xs font-normal font-['Helvetica'] uppercase leading-tight tracking-wider">/</div>
                                 <div className=" text-[11px] font-normal font-['Helvetica'] uppercase leading-tight tracking-wider hover:underline hover:underline-offset-2">Jobs @ Vox Media</div>
                             </div>

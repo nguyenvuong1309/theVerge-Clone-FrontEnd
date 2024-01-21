@@ -8,24 +8,24 @@ import DetailPage from './pages/DetailPage'
 import AllTechPage from './pages/AllTechPage'
 
 function App() {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    const body = document.body;
-    const darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // const [count, setCount] = useState(0)
+  // useEffect(() => {
+  //   const body = document.body;
+  //   const darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    body.setAttribute('data-theme', darkTheme ? 'dark' : 'light');
+  //   body.setAttribute('data-theme', darkTheme ? 'dark' : 'light');
 
-    const darkThemeListener = (event) => {
-      const newTheme = event.matches ? 'dark' : 'light';
-      body.setAttribute('data-theme', newTheme);
-    };
+  //   const darkThemeListener = (event) => {
+  //     const newTheme = event.matches ? 'dark' : 'light';
+  //     body.setAttribute('data-theme', newTheme);
+  //   };
 
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', darkThemeListener);
+  //   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', darkThemeListener);
 
-    return () => {
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', darkThemeListener);
-    };
-  }, []);
+  //   return () => {
+  //     window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', darkThemeListener);
+  //   };
+  // }, []);
   return (
     <BrowserRouter>
       <Routes>
