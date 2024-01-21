@@ -75,7 +75,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="text-[20px] ">/</div>
-                        <div className="text-[20px]  hover:opacity-60 hover:transition-all hover:ease-in-out ">Tech</div>
+                        <div className="text-[20px]  hover:opacity-60 hover:transition-all hover:ease-in-out " onClick={() => navigate("/allTech")}>Tech</div>
                         <div className="text-[20px] ">/</div>
                         <div className="text-[20px]  hover:opacity-60 hover:transition-all hover:ease-in-out ">Reviews</div>
                         <div className="text-[20px] ">/</div>
