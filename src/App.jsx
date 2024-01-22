@@ -31,8 +31,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="detailpage" element={<DetailPage />} />
-          <Route path="allTech" element={<AllTechPage />} />
+          <Route path="/detailpage" element={<DetailPage />} />
+          <Route path="/allTech" element={<AllTechPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
