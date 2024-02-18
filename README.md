@@ -1,8 +1,4 @@
-# React + Vite
+# React 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is primarily focused on acquiring and honing advanced front-end design skills. The main objective is to delve into the intricacies of front-end design, gaining a deeper understanding and proficiency in creating visually appealing and user-friendly interfaces.
+- Link to project : https://the-verge-clone-front-end.vercel.app/
